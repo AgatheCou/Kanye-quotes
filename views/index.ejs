@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/styles/main.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <title>Kany West quotes </title>
+    </head>
+    
+<body>
+    <div>
+        
+        <% if (locals.content) { %>
+            <div class="div-top">
+                <h2> <%= content.quote %> </h2>
+            </div>
+            <div class="div-bottom">
+                <form action="/get-quote" id="form" class="form" method="GET">
+                    <button type="submit" class="glow-on-hover"> <%= content.label %> </button>
+                </form>
+            </div>
+
+          <% } else { %>
+            <div class="div-top">
+                <h2>The best Kanye West quotes</h2> 
+            </div>
+            <div class="div-bottom">
+                <form action="/get-quote" id="form" class="form" method="GET">
+                    <button type="submit" class="glow-on-hover"> Get yours </button>
+                </form> 
+            </div>
+        <% } %>
+
+    </div>
+</body>
+</html>
